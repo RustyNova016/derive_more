@@ -45,6 +45,8 @@ mod index_mut;
 mod into;
 #[cfg(feature = "into_iterator")]
 mod into_iterator;
+#[cfg(feature = "is_variant_and")]
+mod is_variant_and;
 #[cfg(feature = "is_variant")]
 mod is_variant;
 #[cfg(feature = "mul_assign")]
@@ -212,6 +214,14 @@ create_derive!(
     IsVariant,
     is_variant_derive,
     is_variant,
+);
+
+create_derive!(
+    "is_variant_and",
+    is_variant_and,
+    IsVariantAnd,
+    is_variant_and_derive,
+    is_variant_and,
 );
 
 create_derive!("mul", mul_like, Mul, mul_derive, mul);
